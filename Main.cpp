@@ -14,7 +14,17 @@ using namespace std; //Includes so std::string is not required on every line of 
 #include <cmath>
 using namespace std;
 
+int num1;
+int num2;
+int num3;
+
 int getMax(int num1, int num2, int num3) {
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    cout << "Enter the third number: ";
+    cin >> num3;
     int result;
     if (num1 >= num2 && num1 >= num3) {
         result = num1;
@@ -25,6 +35,7 @@ int getMax(int num1, int num2, int num3) {
     else {
         result = num3;
     }
+    cout << "The max of those three numbers is: ";
     return result;
 }
 
@@ -34,10 +45,16 @@ void BetterCalculator();
 
 int main() {
 
+    cout << "Let's find the max of 3 numbers. \n";
+        cout << getMax(num1, num2, num3) << "\n";
 
-    cout << getMax(2, 50, 10);
-    BasicCalculator();
-    BetterCalculator();
+    cout << "Now lets raise a number by an exponent. \n";
+        Exponent();
+
+    cout << "Lets try a simple calculator. \n";
+        BetterCalculator();
+
+ 
 
 	return 0;
 }
@@ -51,7 +68,7 @@ void Exponent() {
     cin >> base; "\n";
     cout << "Now specify your power number: ";
     cin >> power; "\n";
-    cout << "Your result is:" << pow(base, power);
+    cout << "Your result is: " << pow(base, power) << "\n";
 }
   
 
@@ -74,7 +91,7 @@ void BetterCalculator() {
    
     cout << "Enter first number: ";
     cin >> num1;
-    cout << "Enter operator: ";
+    cout << "Enter operator (+ - / *): ";
     cin >> op;
     cout << "Enter second number: ";
     cin >> num2;
