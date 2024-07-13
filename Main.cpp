@@ -54,11 +54,8 @@ int main() {
     cout << "Lets try a simple calculator. \n";
         BetterCalculator();
 
- 
-
 	return 0;
 }
-
 
 
 void Exponent() {
